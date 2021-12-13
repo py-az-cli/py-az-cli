@@ -14,21 +14,15 @@ setup(
     description="Pythonic wrapper for az cli",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/realpython/reader",
-    author="Real Python",
-    author_email="info@realpython.com",
+    url="https://github.com/py-az-cli/py-az-cli,
+    author="David P. Moore,
+    author_email="9993122+bigdatamoore@users.noreply.github.com,
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.9",
     ],
-    packages=["reader"],
-    include_package_data=True,
-    install_requires=["feedparser", "html2text"],
-    entry_points={
-        "console_scripts": [
-            "realpython=reader.__main__:main",
-        ]
-    },
+    packages=["pyaz"],
+    include_package_data=False,
 )
