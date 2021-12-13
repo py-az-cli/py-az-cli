@@ -14,9 +14,9 @@ setup(
     description="Pythonic wrapper for az cli",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/py-az-cli/py-az-cli,
-    author="David P. Moore,
-    author_email="9993122+bigdatamoore@users.noreply.github.com,
+    url="https://github.com/py-az-cli/py-az-cli",
+    author="David P. Moore",
+    author_email="9993122+bigdatamoore@users.noreply.github.com",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
