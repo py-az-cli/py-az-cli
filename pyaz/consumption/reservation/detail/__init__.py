@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def list(end_date, reservation_order_id, start_date, reservation_id=None):
+def list(end_date, reservation_order_id, start_date, reservation_id=None, **kwargs):
     '''
     List the details of a reservation by order id or reservation id.
     '''

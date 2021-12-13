@@ -1,9 +1,9 @@
 from ... pyaz_utils import call_az
 
-def list():
+def list(**kwargs):
     return call_az("az billing enrollment-account list", locals())
 
 
-def show(name):
+def show(name, **kwargs):
     return call_az("az billing enrollment-account show", locals())
 

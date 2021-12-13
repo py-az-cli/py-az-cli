@@ -1,20 +1,20 @@
 from ... pyaz_utils import call_az
 
-def create(name, resource_group, add_disabled=None, calling_web_hook=None, enable_calling=None):
+def create(name, resource_group, add_disabled=None, calling_web_hook=None, enable_calling=None, **kwargs):
     '''
     Create the Microsoft Teams Channel on a bot.
     '''
     return call_az("az bot msteams create", locals())
 
 
-def show(name, resource_group, with_secrets=None):
+def show(name, resource_group, with_secrets=None, **kwargs):
     '''
     Get details of the Microsoft Teams Channel on a bot
     '''
     return call_az("az bot msteams show", locals())
 
 
-def delete(name, resource_group):
+def delete(name, resource_group, **kwargs):
     '''
     Delete the Microsoft Teams Channel on a bot
     '''

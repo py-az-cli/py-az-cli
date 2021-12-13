@@ -2,22 +2,22 @@ from .... pyaz_utils import call_az
 from . import address
 
 
-def create(lb_name, name, resource_group, backend_address=None, backend_addresses_config_file=None):
+def create(lb_name, name, resource_group, backend_address=None, backend_addresses_config_file=None, **kwargs):
     '''
     Create an address pool.
     '''
     return call_az("az network cross-region-lb address-pool create", locals())
 
 
-def show(lb_name, name, resource_group):
+def show(lb_name, name, resource_group, **kwargs):
     return call_az("az network cross-region-lb address-pool show", locals())
 
 
-def list(lb_name, resource_group):
+def list(lb_name, resource_group, **kwargs):
     return call_az("az network cross-region-lb address-pool list", locals())
 
 
-def delete(lb_name, name, resource_group):
+def delete(lb_name, name, resource_group, **kwargs):
     '''
     Delete an address pool.
     '''

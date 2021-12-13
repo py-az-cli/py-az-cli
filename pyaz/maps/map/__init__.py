@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def list_operation():
+def list_operation(**kwargs):
     '''
     List operations available for the Maps Resource Provider.
     '''

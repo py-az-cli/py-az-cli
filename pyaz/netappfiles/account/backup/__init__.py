@@ -1,20 +1,20 @@
 from .... pyaz_utils import call_az
 
-def show(account_name, backup_name, resource_group):
+def show(account_name, backup_name, resource_group, **kwargs):
     '''
     Get Backup for a Netapp Files (ANF) Account.
     '''
     return call_az("az netappfiles account backup show", locals())
 
 
-def list(account_name, resource_group):
+def list(account_name, resource_group, **kwargs):
     '''
     Get list of all Azure NetApp Files (ANF) Account Backups.
     '''
     return call_az("az netappfiles account backup list", locals())
 
 
-def delete(account_name, backup_name, resource_group, yes=None):
+def delete(account_name, backup_name, resource_group, yes=None, **kwargs):
     '''
     Delete Backup for a Netapp Files (ANF) Account.
     '''

@@ -1,13 +1,13 @@
 from .... pyaz_utils import call_az
 
-def set(cluster_name, resource_group, parameter=None, section=None, settings_section_description=None, value=None):
+def set(cluster_name, resource_group, parameter=None, section=None, settings_section_description=None, value=None, **kwargs):
     '''
     Update the settings of a cluster.
     '''
     return call_az("az sf cluster setting set", locals())
 
 
-def remove(cluster_name, resource_group, parameter=None, section=None, settings_section_description=None):
+def remove(cluster_name, resource_group, parameter=None, section=None, settings_section_description=None, **kwargs):
     '''
     Remove settings from a cluster.
     '''

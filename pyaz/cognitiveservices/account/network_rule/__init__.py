@@ -1,20 +1,20 @@
 from .... pyaz_utils import call_az
 
-def add(name, resource_group, ip_address=None, subnet=None, vnet_name=None):
+def add(name, resource_group, ip_address=None, subnet=None, vnet_name=None, **kwargs):
     '''
     Add a network rule.
     '''
     return call_az("az cognitiveservices account network-rule add", locals())
 
 
-def list(name, resource_group):
+def list(name, resource_group, **kwargs):
     '''
     List network rules.
     '''
     return call_az("az cognitiveservices account network-rule list", locals())
 
 
-def remove(name, resource_group, ip_address=None, subnet=None, vnet_name=None):
+def remove(name, resource_group, ip_address=None, subnet=None, vnet_name=None, **kwargs):
     '''
     Remove a network rule.
     '''

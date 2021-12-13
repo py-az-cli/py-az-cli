@@ -1,13 +1,13 @@
 from ... pyaz_utils import call_az
 
-def show(location):
+def show(location, **kwargs):
     '''
     Show the Azure CosmosDB location properties in the given location.
     '''
     return call_az("az cosmosdb locations show", locals())
 
 
-def list():
+def list(**kwargs):
     '''
     Retrieves the list of cosmosdb locations and their properties.
     '''

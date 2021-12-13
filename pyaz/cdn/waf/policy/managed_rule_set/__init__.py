@@ -2,35 +2,35 @@ from ..... pyaz_utils import call_az
 from . import rule_group_override
 
 
-def add(policy_name, resource_group, rule_set_type, rule_set_version):
+def add(policy_name, resource_group, rule_set_type, rule_set_version, **kwargs):
     '''
     Add a managed rule set to a CDN WAF policy.
     '''
     return call_az("az cdn waf policy managed-rule-set add", locals())
 
 
-def remove(policy_name, resource_group, rule_set_type, rule_set_version, yes=None):
+def remove(policy_name, resource_group, rule_set_type, rule_set_version, yes=None, **kwargs):
     '''
     Remove a managed rule set from a CDN WAF policy.
     '''
     return call_az("az cdn waf policy managed-rule-set remove", locals())
 
 
-def list(policy_name, resource_group):
+def list(policy_name, resource_group, **kwargs):
     '''
     List managed rule sets added to a CDN WAF policy.
     '''
     return call_az("az cdn waf policy managed-rule-set list", locals())
 
 
-def show(policy_name, resource_group, rule_set_type, rule_set_version):
+def show(policy_name, resource_group, rule_set_type, rule_set_version, **kwargs):
     '''
     Show a managed rule of a CDN WAF policy.
     '''
     return call_az("az cdn waf policy managed-rule-set show", locals())
 
 
-def list_available():
+def list_available(**kwargs):
     '''
     List available CDN WAF managed rule sets.
     '''

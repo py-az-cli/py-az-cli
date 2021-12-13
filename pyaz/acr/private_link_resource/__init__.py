@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def list(name, resource_group=None):
+def list(name, resource_group=None, **kwargs):
     '''
     list the private link resources supported for a registry
     '''

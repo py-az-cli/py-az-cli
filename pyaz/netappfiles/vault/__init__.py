@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def list(account_name, resource_group):
+def list(account_name, resource_group, **kwargs):
     '''
     List the ANF vaults for NetApp Account.
     '''

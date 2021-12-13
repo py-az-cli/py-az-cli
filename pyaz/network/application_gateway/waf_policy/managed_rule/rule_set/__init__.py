@@ -1,6 +1,6 @@
 from ...... pyaz_utils import call_az
 
-def add(policy_name, resource_group, type, version, group_name=None, rules=None):
+def add(policy_name, resource_group, type, version, group_name=None, rules=None, **kwargs):
     '''
     Add managed rule set to the WAF policy managed rules. For rule set and rules, please visit: https://docs.microsoft.com/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules
 
@@ -8,7 +8,7 @@ def add(policy_name, resource_group, type, version, group_name=None, rules=None)
     return call_az("az network application-gateway waf-policy managed-rule rule-set add", locals())
 
 
-def update(policy_name, resource_group, type, version, add=None, force_string=None, group_name=None, remove=None, rules=None, set=None):
+def update(policy_name, resource_group, type, version, add=None, force_string=None, group_name=None, remove=None, rules=None, set=None, **kwargs):
     '''
     Manage rules of a WAF policy. If --group-name and --rules are provided, override existing rules. If --group-name is provided, clear all rules under a certain rule group. If neither of them are provided, update rule set and clear all rules under itself. For rule set and rules, please visit: https://docs.microsoft.com/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules
 
@@ -16,7 +16,7 @@ def update(policy_name, resource_group, type, version, add=None, force_string=No
     return call_az("az network application-gateway waf-policy managed-rule rule-set update", locals())
 
 
-def remove(policy_name, resource_group, type, version, group_name=None):
+def remove(policy_name, resource_group, type, version, group_name=None, **kwargs):
     '''
     Remove a managed rule set by rule set group name if rule_group_name is specified. Otherwise, remove all rule set.
 
@@ -24,7 +24,7 @@ def remove(policy_name, resource_group, type, version, group_name=None):
     return call_az("az network application-gateway waf-policy managed-rule rule-set remove", locals())
 
 
-def list(policy_name, resource_group):
+def list(policy_name, resource_group, **kwargs):
     '''
     List all managed rule set.
     '''

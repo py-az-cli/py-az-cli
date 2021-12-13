@@ -1,28 +1,28 @@
 from ... pyaz_utils import call_az
 
-def show(location, name, resource_group):
+def show(location, name, resource_group, **kwargs):
     return call_az("az sql instance-failover-group show", locals())
 
 
-def create(name, partner_mi, partner_resource_group, resource_group, source_mi, failover_policy=None, grace_period=None):
+def create(name, partner_mi, partner_resource_group, resource_group, source_mi, failover_policy=None, grace_period=None, **kwargs):
     '''
     Creates an instance failover group between two connected managed instances.
     '''
     return call_az("az sql instance-failover-group create", locals())
 
 
-def update(location, name, resource_group, add=None, failover_policy=None, force_string=None, grace_period=None, remove=None, set=None):
+def update(location, name, resource_group, add=None, failover_policy=None, force_string=None, grace_period=None, remove=None, set=None, **kwargs):
     '''
     Updates the instance failover group.
     '''
     return call_az("az sql instance-failover-group update", locals())
 
 
-def delete(location, name, resource_group):
+def delete(location, name, resource_group, **kwargs):
     return call_az("az sql instance-failover-group delete", locals())
 
 
-def set_primary(location, name, resource_group, allow_data_loss=None):
+def set_primary(location, name, resource_group, allow_data_loss=None, **kwargs):
     '''
     Set the primary of the instance failover group by failing over all databases from the current primary managed instance.
     '''

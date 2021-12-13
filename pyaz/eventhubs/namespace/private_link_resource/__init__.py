@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def show(namespace_name, resource_group):
+def show(namespace_name, resource_group, **kwargs):
     '''
     Get the private link resources that need to be created for a eventhubs namespace.
     '''

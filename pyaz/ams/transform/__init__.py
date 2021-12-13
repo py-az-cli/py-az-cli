@@ -2,35 +2,35 @@ from ... pyaz_utils import call_az
 from . import output
 
 
-def show(account_name, name, resource_group):
+def show(account_name, name, resource_group, **kwargs):
     '''
     Show the details of a transform.
     '''
     return call_az("az ams transform show", locals())
 
 
-def list(account_name, resource_group, filter=None, orderby=None):
+def list(account_name, resource_group, filter=None, orderby=None, **kwargs):
     '''
     List all the transforms of an Azure Media Services account.
     '''
     return call_az("az ams transform list", locals())
 
 
-def delete(account_name, name, resource_group):
+def delete(account_name, name, resource_group, **kwargs):
     '''
     Delete a transform.
     '''
     return call_az("az ams transform delete", locals())
 
 
-def create(account_name, name, preset, resource_group, audio_analysis_mode=None, audio_language=None, description=None, insights_to_extract=None, on_error=None, relative_priority=None, resolution=None, video_analysis_mode=None):
+def create(account_name, name, preset, resource_group, audio_analysis_mode=None, audio_language=None, description=None, insights_to_extract=None, on_error=None, relative_priority=None, resolution=None, video_analysis_mode=None, **kwargs):
     '''
     Create a transform.
     '''
     return call_az("az ams transform create", locals())
 
 
-def update(account_name, name, resource_group, add=None, description=None, force_string=None, remove=None, set=None):
+def update(account_name, name, resource_group, add=None, description=None, force_string=None, remove=None, set=None, **kwargs):
     '''
     Update the details of a transform.
     '''

@@ -1,10 +1,10 @@
 from .... pyaz_utils import call_az
 
-def show(managed_instance, resource_group):
+def show(managed_instance, resource_group, **kwargs):
     return call_az("az sql mi tde-key show", locals())
 
 
-def set(managed_instance, resource_group, server_key_type, auto_rotation_enabled=None, kid=None):
+def set(managed_instance, resource_group, server_key_type, auto_rotation_enabled=None, kid=None, **kwargs):
     '''
     Sets the SQL Instance's encryption protector.
     '''

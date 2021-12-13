@@ -1,34 +1,34 @@
 from .... pyaz_utils import call_az
 
-def create(executor_size, executors, name, spark_pool_name, workspace_name, configuration=None, reference_files=None, tags=None):
+def create(executor_size, executors, name, spark_pool_name, workspace_name, configuration=None, reference_files=None, tags=None, **kwargs):
     '''
     Create a Spark session.
     '''
     return call_az("az synapse spark session create", locals())
 
 
-def list(spark_pool_name, workspace_name, from_index=None, size=None):
+def list(spark_pool_name, workspace_name, from_index=None, size=None, **kwargs):
     '''
     List all Spark sessions.
     '''
     return call_az("az synapse spark session list", locals())
 
 
-def show(livy_id, spark_pool_name, workspace_name):
+def show(livy_id, spark_pool_name, workspace_name, **kwargs):
     '''
     Get a Spark session.
     '''
     return call_az("az synapse spark session show", locals())
 
 
-def cancel(livy_id, spark_pool_name, workspace_name, yes=None):
+def cancel(livy_id, spark_pool_name, workspace_name, yes=None, **kwargs):
     '''
     Cancel a Spark session.
     '''
     return call_az("az synapse spark session cancel", locals())
 
 
-def reset_timeout(livy_id, spark_pool_name, workspace_name):
+def reset_timeout(livy_id, spark_pool_name, workspace_name, **kwargs):
     '''
     Reset a Spark session timeout time.
     '''

@@ -1,20 +1,20 @@
 from ... pyaz_utils import call_az
 
-def list(name, authentication_provider=None, resource_group=None):
+def list(name, authentication_provider=None, resource_group=None, **kwargs):
     '''
     Lists users and assigned roles, limited to users who accepted their invites.
     '''
     return call_az("az staticwebapp users list", locals())
 
 
-def invite(authentication_provider, domain, invitation_expiration_in_hours, name, roles, user_details, resource_group=None):
+def invite(authentication_provider, domain, invitation_expiration_in_hours, name, roles, user_details, resource_group=None, **kwargs):
     '''
     Create invitation link for specified user to the static app.
     '''
     return call_az("az staticwebapp users invite", locals())
 
 
-def update(name, roles, authentication_provider=None, resource_group=None, user_details=None, user_id=None):
+def update(name, roles, authentication_provider=None, resource_group=None, user_details=None, user_id=None, **kwargs):
     '''
     Updates a user entry with the listed roles. Either user details or user id is required.
     '''

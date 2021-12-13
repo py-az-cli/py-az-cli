@@ -1,27 +1,27 @@
 from ..... pyaz_utils import call_az
 
-def set(action, name, policy_name, priority, resource_group, disabled=None):
+def set(action, name, policy_name, priority, resource_group, disabled=None, **kwargs):
     '''
     Add a custom rule to a CDN WAF policy.
     '''
     return call_az("az cdn waf policy custom-rule set", locals())
 
 
-def delete(name, policy_name, resource_group, yes=None):
+def delete(name, policy_name, resource_group, yes=None, **kwargs):
     '''
     Remove a custom rule from a CDN WAF policy.
     '''
     return call_az("az cdn waf policy custom-rule delete", locals())
 
 
-def list(policy_name, resource_group):
+def list(policy_name, resource_group, **kwargs):
     '''
     List custom rules of a CDN WAF policy.
     '''
     return call_az("az cdn waf policy custom-rule list", locals())
 
 
-def show(name, policy_name, resource_group):
+def show(name, policy_name, resource_group, **kwargs):
     '''
     Show a custom rule of a CDN WAF policy.
     '''

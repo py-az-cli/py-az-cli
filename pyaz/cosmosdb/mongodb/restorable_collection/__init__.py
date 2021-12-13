@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def list(database_rid, instance_id, location):
+def list(database_rid, instance_id, location, **kwargs):
     '''
     List all the versions of all the mongodb collections that were created / modified / deleted in the given database and restorable account.
     '''

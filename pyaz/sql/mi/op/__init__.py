@@ -1,13 +1,13 @@
 from .... pyaz_utils import call_az
 
-def list(managed_instance, resource_group):
+def list(managed_instance, resource_group, **kwargs):
     return call_az("az sql mi op list", locals())
 
 
-def show(managed_instance, name, resource_group):
+def show(managed_instance, name, resource_group, **kwargs):
     return call_az("az sql mi op show", locals())
 
 
-def cancel(managed_instance, name, resource_group):
+def cancel(managed_instance, name, resource_group, **kwargs):
     return call_az("az sql mi op cancel", locals())
 

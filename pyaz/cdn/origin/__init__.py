@@ -1,27 +1,27 @@
 from ... pyaz_utils import call_az
 
-def show(endpoint_name, name, profile_name, resource_group):
+def show(endpoint_name, name, profile_name, resource_group, **kwargs):
     return call_az("az cdn origin show", locals())
 
 
-def list(endpoint_name, profile_name, resource_group):
+def list(endpoint_name, profile_name, resource_group, **kwargs):
     return call_az("az cdn origin list", locals())
 
 
-def create(endpoint_name, host_name, name, profile_name, resource_group, disabled=None, http_port=None, https_port=None, origin_host_header=None, priority=None, private_link_approval_message=None, private_link_location=None, private_link_resource_id=None, weight=None):
+def create(endpoint_name, host_name, name, profile_name, resource_group, disabled=None, http_port=None, https_port=None, origin_host_header=None, priority=None, private_link_approval_message=None, private_link_location=None, private_link_resource_id=None, weight=None, **kwargs):
     '''
     Create an origin.
     '''
     return call_az("az cdn origin create", locals())
 
 
-def update(endpoint_name, name, profile_name, resource_group, disabled=None, host_name=None, http_port=None, https_port=None, origin_host_header=None, priority=None, private_link_approval_message=None, private_link_location=None, private_link_resource_id=None, weight=None):
+def update(endpoint_name, name, profile_name, resource_group, disabled=None, host_name=None, http_port=None, https_port=None, origin_host_header=None, priority=None, private_link_approval_message=None, private_link_location=None, private_link_resource_id=None, weight=None, **kwargs):
     '''
     Update an origin.
     '''
     return call_az("az cdn origin update", locals())
 
 
-def delete(endpoint_name, name, profile_name, resource_group, yes=None):
+def delete(endpoint_name, name, profile_name, resource_group, yes=None, **kwargs):
     return call_az("az cdn origin delete", locals())
 

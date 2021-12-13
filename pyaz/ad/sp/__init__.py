@@ -2,42 +2,42 @@ from ... pyaz_utils import call_az
 from . import credential, owner
 
 
-def create(id):
+def create(id, **kwargs):
     '''
     Create a service principal.
     '''
     return call_az("az ad sp create", locals())
 
 
-def delete(id):
+def delete(id, **kwargs):
     '''
     Delete a service principal and its role assignments.
     '''
     return call_az("az ad sp delete", locals())
 
 
-def list(all=None, display_name=None, filter=None, show_mine=None, spn=None):
+def list(all=None, display_name=None, filter=None, show_mine=None, spn=None, **kwargs):
     '''
     List service principals.
     '''
     return call_az("az ad sp list", locals())
 
 
-def show(id):
+def show(id, **kwargs):
     '''
     Get the details of a service principal.
     '''
     return call_az("az ad sp show", locals())
 
 
-def update(id, add=None, force_string=None, remove=None, set=None):
+def update(id, add=None, force_string=None, remove=None, set=None, **kwargs):
     '''
     Update a service principal
     '''
     return call_az("az ad sp update", locals())
 
 
-def create_for_rbac(cert=None, create_cert=None, keyvault=None, name=None, role=None, scopes=None, sdk_auth=None, skip_assignment=None, years=None):
+def create_for_rbac(cert=None, create_cert=None, keyvault=None, name=None, role=None, scopes=None, sdk_auth=None, skip_assignment=None, years=None, **kwargs):
     '''
     Create a service principal and configure its access to Azure resources.
     '''

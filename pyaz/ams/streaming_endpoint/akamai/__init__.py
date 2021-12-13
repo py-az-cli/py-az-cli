@@ -1,13 +1,13 @@
 from .... pyaz_utils import call_az
 
-def add(account_name, name, resource_group, base64_key=None, expiration=None, identifier=None):
+def add(account_name, name, resource_group, base64_key=None, expiration=None, identifier=None, **kwargs):
     '''
     Add an AkamaiAccessControl to an existing streaming endpoint.
     '''
     return call_az("az ams streaming-endpoint akamai add", locals())
 
 
-def remove(account_name, identifier, name, resource_group):
+def remove(account_name, identifier, name, resource_group, **kwargs):
     '''
     Remove an AkamaiAccessControl from an existing streaming endpoint.
     '''

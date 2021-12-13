@@ -1,10 +1,10 @@
 from ... pyaz_utils import call_az
 
-def list(artifact_source_name, lab_name, resource_group, expand=None, filter=None, orderby=None, top=None):
+def list(artifact_source_name, lab_name, resource_group, expand=None, filter=None, orderby=None, top=None, **kwargs):
     return call_az("az lab arm-template list", locals())
 
 
-def show(artifact_source_name, lab_name, name, resource_group, export_parameters=None):
+def show(artifact_source_name, lab_name, name, resource_group, export_parameters=None, **kwargs):
     '''
     Get the details of an ARM template in a lab.
     '''

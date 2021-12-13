@@ -1,13 +1,13 @@
 from .... pyaz_utils import call_az
 
-def show():
+def show(**kwargs):
     '''
     Get deployment publishing user.
     '''
     return call_az("az webapp deployment user show", locals())
 
 
-def set(user_name, password=None):
+def set(user_name, password=None, **kwargs):
     '''
     Update deployment credentials.
     '''

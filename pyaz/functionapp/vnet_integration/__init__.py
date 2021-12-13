@@ -1,20 +1,20 @@
 from ... pyaz_utils import call_az
 
-def add(name, resource_group, subnet, vnet, skip_delegation_check=None, slot=None):
+def add(name, resource_group, subnet, vnet, skip_delegation_check=None, slot=None, **kwargs):
     '''
     Add a regional virtual network integration to a functionapp
     '''
     return call_az("az functionapp vnet-integration add", locals())
 
 
-def list(name, resource_group, slot=None):
+def list(name, resource_group, slot=None, **kwargs):
     '''
     list the virtual network integrations on a functionapp
     '''
     return call_az("az functionapp vnet-integration list", locals())
 
 
-def remove(name, resource_group, slot=None):
+def remove(name, resource_group, slot=None, **kwargs):
     '''
     remove a regional virtual network integration from functionapp
     '''

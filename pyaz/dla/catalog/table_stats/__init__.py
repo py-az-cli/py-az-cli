@@ -1,10 +1,10 @@
 from .... pyaz_utils import call_az
 
-def show(account, database_name, schema_name, statistics_name, table_name):
+def show(account, database_name, schema_name, statistics_name, table_name, **kwargs):
     return call_az("az dla catalog table-stats show", locals())
 
 
-def list(account, database_name, schema_name=None, table_name=None):
+def list(account, database_name, schema_name=None, table_name=None, **kwargs):
     '''
     List table statistics in a database, table, or schema.
     '''

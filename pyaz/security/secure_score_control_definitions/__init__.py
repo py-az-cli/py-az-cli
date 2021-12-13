@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def list():
+def list(**kwargs):
     '''
     Get details of secure score control definitions.
     '''

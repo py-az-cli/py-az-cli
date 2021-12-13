@@ -2,7 +2,7 @@ from ... pyaz_utils import call_az
 from . import quotas
 
 
-def list_skus(location, filter=None, maxresults=None):
+def list_skus(location, filter=None, maxresults=None, **kwargs):
     '''
     List virtual machine SKUs available in a location.
     '''

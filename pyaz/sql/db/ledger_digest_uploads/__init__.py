@@ -1,20 +1,20 @@
 from .... pyaz_utils import call_az
 
-def show(name, resource_group, server):
+def show(name, resource_group, server, **kwargs):
     '''
     Show the current ledger digest settings.
     '''
     return call_az("az sql db ledger-digest-uploads show", locals())
 
 
-def enable(endpoint, name, resource_group, server):
+def enable(endpoint, name, resource_group, server, **kwargs):
     '''
     Enable uploading ledger digests to an Azure Storage account or to Azure Confidential Ledger. If uploading ledger digests is already enabled, the cmdlet resets the digest storage endpoint to a new value.
     '''
     return call_az("az sql db ledger-digest-uploads enable", locals())
 
 
-def disable(name, resource_group, server):
+def disable(name, resource_group, server, **kwargs):
     '''
     Disable uploading ledger digests.
     '''

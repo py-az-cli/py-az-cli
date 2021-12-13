@@ -1,20 +1,20 @@
 from ... pyaz_utils import call_az
 
-def create(name, replication_role, resource_group, server_to_link):
+def create(name, replication_role, resource_group, server_to_link, **kwargs):
     '''
     Adds a server link to the Redis cache (requires Premium SKU).
     '''
     return call_az("az redis server-link create", locals())
 
 
-def delete(linked_server_name, name, resource_group):
+def delete(linked_server_name, name, resource_group, **kwargs):
     return call_az("az redis server-link delete", locals())
 
 
-def show(linked_server_name, name, resource_group):
+def show(linked_server_name, name, resource_group, **kwargs):
     return call_az("az redis server-link show", locals())
 
 
-def list(name, resource_group):
+def list(name, resource_group, **kwargs):
     return call_az("az redis server-link list", locals())
 

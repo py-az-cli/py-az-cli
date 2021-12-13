@@ -1,27 +1,27 @@
 from .... pyaz_utils import call_az
 
-def list(product_id, resource_group, service_name):
+def list(product_id, resource_group, service_name, **kwargs):
     '''
     Lists a collection of the APIs associated with a product.
     '''
     return call_az("az apim product api list", locals())
 
 
-def check(api_id, product_id, resource_group, service_name):
+def check(api_id, product_id, resource_group, service_name, **kwargs):
     '''
     Checks that API entity specified by identifier is associated with the Product entity.
     '''
     return call_az("az apim product api check", locals())
 
 
-def add(api_id, product_id, resource_group, service_name):
+def add(api_id, product_id, resource_group, service_name, **kwargs):
     '''
     Add an API to the specified product.
     '''
     return call_az("az apim product api add", locals())
 
 
-def delete(api_id, product_id, resource_group, service_name):
+def delete(api_id, product_id, resource_group, service_name, **kwargs):
     '''
     Deletes the specified API from the specified product.
     '''

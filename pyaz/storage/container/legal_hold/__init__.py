@@ -1,20 +1,20 @@
 from .... pyaz_utils import call_az
 
-def set(account_name, container_name, tags, allow_protected_append_writes_all=None, resource_group=None):
+def set(account_name, container_name, tags, allow_protected_append_writes_all=None, resource_group=None, **kwargs):
     '''
     Set legal hold tags.
     '''
     return call_az("az storage container legal-hold set", locals())
 
 
-def clear(account_name, container_name, tags, allow_protected_append_writes_all=None, resource_group=None):
+def clear(account_name, container_name, tags, allow_protected_append_writes_all=None, resource_group=None, **kwargs):
     '''
     Clear legal hold tags.
     '''
     return call_az("az storage container legal-hold clear", locals())
 
 
-def show(account_name, container_name, resource_group=None):
+def show(account_name, container_name, resource_group=None, **kwargs):
     '''
     Get the legal hold properties of a container.
     '''

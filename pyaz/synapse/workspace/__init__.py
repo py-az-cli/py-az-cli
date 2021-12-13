@@ -2,56 +2,56 @@ from ... pyaz_utils import call_az
 from . import firewall_rule, key, managed_identity
 
 
-def show(name, resource_group):
+def show(name, resource_group, **kwargs):
     '''
     Get a Synapse workspace.
     '''
     return call_az("az synapse workspace show", locals())
 
 
-def list(resource_group=None):
+def list(resource_group=None, **kwargs):
     '''
     List all Synapse workspaces.
     '''
     return call_az("az synapse workspace list", locals())
 
 
-def create(file_system, name, resource_group, sql_admin_login_password, sql_admin_login_user, storage_account, account_name=None, allowed_tenant_ids=None, collaboration_branch=None, enable_managed_vnet=None, host_name=None, key_identifier=None, key_name=None, location=None, no_wait=None, prevent_exfiltration=None, project_name=None, repository_name=None, repository_type=None, root_folder=None, tags=None, tenant_id=None):
+def create(file_system, name, resource_group, sql_admin_login_password, sql_admin_login_user, storage_account, account_name=None, allowed_tenant_ids=None, collaboration_branch=None, enable_managed_vnet=None, host_name=None, key_identifier=None, key_name=None, location=None, no_wait=None, prevent_exfiltration=None, project_name=None, repository_name=None, repository_type=None, root_folder=None, tags=None, tenant_id=None, **kwargs):
     '''
     Create a Synapse workspace.
     '''
     return call_az("az synapse workspace create", locals())
 
 
-def update(name, resource_group, account_name=None, allowed_tenant_ids=None, collaboration_branch=None, host_name=None, key_name=None, no_wait=None, project_name=None, repository_name=None, repository_type=None, root_folder=None, sql_admin_login_password=None, tags=None, tenant_id=None):
+def update(name, resource_group, account_name=None, allowed_tenant_ids=None, collaboration_branch=None, host_name=None, key_name=None, no_wait=None, project_name=None, repository_name=None, repository_type=None, root_folder=None, sql_admin_login_password=None, tags=None, tenant_id=None, **kwargs):
     '''
     Update a Synapse workspace.
     '''
     return call_az("az synapse workspace update", locals())
 
 
-def check_name(name):
+def check_name(name, **kwargs):
     '''
     Check if a Synapse workspace name is available or not.
     '''
     return call_az("az synapse workspace check-name", locals())
 
 
-def delete(name, resource_group, no_wait=None, yes=None):
+def delete(name, resource_group, no_wait=None, yes=None, **kwargs):
     '''
     Delete a Synapse workspace.
     '''
     return call_az("az synapse workspace delete", locals())
 
 
-def activate(key_identifier, name, resource_group, workspace_name, no_wait=None):
+def activate(key_identifier, name, resource_group, workspace_name, no_wait=None, **kwargs):
     '''
     Activates a workspace and change it's state from pending to success state when the workspace is first being provisioned and double encryption is enabled.
     '''
     return call_az("az synapse workspace activate", locals())
 
 
-def wait(resource_group, workspace_name, created=None, custom=None, deleted=None, exists=None, interval=None, timeout=None, updated=None):
+def wait(resource_group, workspace_name, created=None, custom=None, deleted=None, exists=None, interval=None, timeout=None, updated=None, **kwargs):
     '''
     Place the CLI in a waiting state until a condition of the workspace is met.
     '''

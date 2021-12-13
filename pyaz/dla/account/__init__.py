@@ -2,35 +2,35 @@ from ... pyaz_utils import call_az
 from . import blob_storage, compute_policy, data_lake_store, firewall
 
 
-def create(account, default_data_lake_store, location=None, max_degree_of_parallelism=None, max_job_count=None, query_store_retention=None, resource_group=None, tags=None, tier=None):
+def create(account, default_data_lake_store, location=None, max_degree_of_parallelism=None, max_job_count=None, query_store_retention=None, resource_group=None, tags=None, tier=None, **kwargs):
     '''
     Create a Data Lake Analytics account.
     '''
     return call_az("az dla account create", locals())
 
 
-def update(account, allow_azure_ips=None, firewall_state=None, max_degree_of_parallelism=None, max_job_count=None, query_store_retention=None, resource_group=None, tags=None, tier=None):
+def update(account, allow_azure_ips=None, firewall_state=None, max_degree_of_parallelism=None, max_job_count=None, query_store_retention=None, resource_group=None, tags=None, tier=None, **kwargs):
     '''
     Update a Data Lake Analytics account.
     '''
     return call_az("az dla account update", locals())
 
 
-def list(resource_group=None):
+def list(resource_group=None, **kwargs):
     '''
     List available Data Lake Analytics accounts.
     '''
     return call_az("az dla account list", locals())
 
 
-def show(account, resource_group=None):
+def show(account, resource_group=None, **kwargs):
     '''
     Get the details of a Data Lake Analytics account.
     '''
     return call_az("az dla account show", locals())
 
 
-def delete(account, resource_group=None):
+def delete(account, resource_group=None, **kwargs):
     '''
     Delete a Data Lake Analytics account.
     '''

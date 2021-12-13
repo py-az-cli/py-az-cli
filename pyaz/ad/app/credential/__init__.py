@@ -1,20 +1,20 @@
 from .... pyaz_utils import call_az
 
-def reset(id, append=None, cert=None, create_cert=None, credential_description=None, end_date=None, keyvault=None, password=None, years=None):
+def reset(id, append=None, cert=None, create_cert=None, credential_description=None, end_date=None, keyvault=None, password=None, years=None, **kwargs):
     '''
     Append or overwrite an application's password or certificate credentials
     '''
     return call_az("az ad app credential reset", locals())
 
 
-def list(id, cert=None):
+def list(id, cert=None, **kwargs):
     '''
     List an application's password or certificate credential metadata. (The content of the password or certificate credential is not retrievable.)
     '''
     return call_az("az ad app credential list", locals())
 
 
-def delete(id, key_id, cert=None):
+def delete(id, key_id, cert=None, **kwargs):
     '''
     delete an application's password or certificate credentials
     '''

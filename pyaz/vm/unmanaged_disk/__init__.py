@@ -1,20 +1,20 @@
 from ... pyaz_utils import call_az
 
-def attach(resource_group, vm_name, caching=None, lun=None, name=None, new=None, size_gb=None, vhd_uri=None):
+def attach(resource_group, vm_name, caching=None, lun=None, name=None, new=None, size_gb=None, vhd_uri=None, **kwargs):
     '''
     Attach an unmanaged persistent disk to a VM.
     '''
     return call_az("az vm unmanaged-disk attach", locals())
 
 
-def detach(name, resource_group, vm_name):
+def detach(name, resource_group, vm_name, **kwargs):
     '''
     Detach an unmanaged disk from a VM.
     '''
     return call_az("az vm unmanaged-disk detach", locals())
 
 
-def list(resource_group, vm_name):
+def list(resource_group, vm_name, **kwargs):
     '''
     List unmanaged disks of a VM.
     '''

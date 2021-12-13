@@ -1,27 +1,27 @@
 from ... pyaz_utils import call_az
 
-def list(name, resource_group=None):
+def list(name, resource_group=None, **kwargs):
     '''
     List custom hostnames of the static app.
     '''
     return call_az("az staticwebapp hostname list", locals())
 
 
-def set(hostname, name, no_wait=None, resource_group=None, validation_method=None):
+def set(hostname, name, no_wait=None, resource_group=None, validation_method=None, **kwargs):
     '''
     Set given sub-domain hostname to the static app. Please configure CNAME/TXT/ALIAS record with your DNS provider. Use --no-wait to not wait for validation.
     '''
     return call_az("az staticwebapp hostname set", locals())
 
 
-def delete(hostname, name, no_wait=None, resource_group=None, yes=None):
+def delete(hostname, name, no_wait=None, resource_group=None, yes=None, **kwargs):
     '''
     Delete given hostname of the static app.
     '''
     return call_az("az staticwebapp hostname delete", locals())
 
 
-def show(hostname, name, resource_group):
+def show(hostname, name, resource_group, **kwargs):
     '''
     Get details for a staticwebapp custom domain. Can be used to fetch validation token for TXT domain validation (see example).
     '''

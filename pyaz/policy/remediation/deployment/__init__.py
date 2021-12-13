@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def list(name, management_group=None, namespace=None, parent=None, resource=None, resource_group=None, resource_type=None):
+def list(name, management_group=None, namespace=None, parent=None, resource=None, resource_group=None, resource_type=None, **kwargs):
     '''
     Lists deployments for a resource policy remediation.
     '''

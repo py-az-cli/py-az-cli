@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def list(namespace):
+def list(namespace, **kwargs):
     '''
     List permissions from a provider.
     '''

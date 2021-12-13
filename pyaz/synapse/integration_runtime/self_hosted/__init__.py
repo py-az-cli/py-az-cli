@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def create(name, resource_group, workspace_name, description=None, if_match=None, no_wait=None):
+def create(name, resource_group, workspace_name, description=None, if_match=None, no_wait=None, **kwargs):
     '''
     Create an self-hosted integration runtime.
     '''

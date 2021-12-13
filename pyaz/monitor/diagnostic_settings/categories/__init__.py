@@ -1,10 +1,10 @@
 from .... pyaz_utils import call_az
 
-def show(name, resource, resource_group=None, resource_namespace=None, resource_parent=None, resource_type=None):
+def show(name, resource, resource_group=None, resource_namespace=None, resource_parent=None, resource_type=None, **kwargs):
     return call_az("az monitor diagnostic-settings categories show", locals())
 
 
-def list(resource, resource_group=None, resource_namespace=None, resource_parent=None, resource_type=None):
+def list(resource, resource_group=None, resource_namespace=None, resource_parent=None, resource_type=None, **kwargs):
     '''
     List the diagnostic settings categories for the specified resource.
     '''

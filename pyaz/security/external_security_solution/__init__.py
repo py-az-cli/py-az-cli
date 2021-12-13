@@ -1,13 +1,13 @@
 from ... pyaz_utils import call_az
 
-def list():
+def list(**kwargs):
     '''
     List the external security solutions.
     '''
     return call_az("az security external-security-solution list", locals())
 
 
-def show(name, resource_group):
+def show(name, resource_group, **kwargs):
     '''
     Shows an external security solution.
     '''

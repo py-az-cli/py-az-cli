@@ -1,27 +1,27 @@
 from ... pyaz_utils import call_az
 
-def create(group_member, location, name, resource_group, trust_scope, no_wait=None):
+def create(group_member, location, name, resource_group, trust_scope, no_wait=None, **kwargs):
     '''
     Create a Server Trust Group.
     '''
     return call_az("az sql stg create", locals())
 
 
-def delete(location, name, resource_group, no_wait=None, yes=None):
+def delete(location, name, resource_group, no_wait=None, yes=None, **kwargs):
     '''
     Delete a Server Trust Group.
     '''
     return call_az("az sql stg delete", locals())
 
 
-def show(location, name, resource_group):
+def show(location, name, resource_group, **kwargs):
     '''
     Retrieve a Server Trust Group.
     '''
     return call_az("az sql stg show", locals())
 
 
-def list(resource_group, instance_name=None, location=None):
+def list(resource_group, instance_name=None, location=None, **kwargs):
     '''
     Retrieve a list of Server Trust Groups.
     '''

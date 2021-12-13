@@ -1,20 +1,20 @@
 from .... pyaz_utils import call_az
 
-def assign(gateway_name, identity, resource_group, no_wait=None):
+def assign(gateway_name, identity, resource_group, no_wait=None, **kwargs):
     '''
     Assign a managed service identity to an application-gateway
     '''
     return call_az("az network application-gateway identity assign", locals())
 
 
-def remove(gateway_name, resource_group, no_wait=None):
+def remove(gateway_name, resource_group, no_wait=None, **kwargs):
     '''
     Remove the managed service identity of an application-gateway
     '''
     return call_az("az network application-gateway identity remove", locals())
 
 
-def show(gateway_name, resource_group):
+def show(gateway_name, resource_group, **kwargs):
     '''
     Show the managed service identity of an application-gateway
     '''

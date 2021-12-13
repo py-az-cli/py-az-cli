@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def show(analytics_query, name, resource_group, timespan=None):
+def show(analytics_query, name, resource_group, timespan=None, **kwargs):
     '''
     Execute a query against the Log Analytics workspace linked with a VM.
     '''

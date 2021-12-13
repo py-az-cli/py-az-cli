@@ -1,27 +1,27 @@
 from .... pyaz_utils import call_az
 
-def add(external_mappings, gateway_name, internal_mappings, name, resource_group, ip_config_id=None, mode=None, no_wait=None, type=None):
+def add(external_mappings, gateway_name, internal_mappings, name, resource_group, ip_config_id=None, mode=None, no_wait=None, type=None, **kwargs):
     '''
     Add nat rule in a virtual network gateway
     '''
     return call_az("az network vnet-gateway nat-rule add", locals())
 
 
-def list(gateway_name, resource_group):
+def list(gateway_name, resource_group, **kwargs):
     '''
     List nat rule for a virtual network gateway
     '''
     return call_az("az network vnet-gateway nat-rule list", locals())
 
 
-def remove(gateway_name, name, resource_group, no_wait=None):
+def remove(gateway_name, name, resource_group, no_wait=None, **kwargs):
     '''
     Remove nat rule from a virtual network gateway
     '''
     return call_az("az network vnet-gateway nat-rule remove", locals())
 
 
-def wait(name, resource_group, created=None, custom=None, deleted=None, exists=None, interval=None, timeout=None, updated=None):
+def wait(name, resource_group, created=None, custom=None, deleted=None, exists=None, interval=None, timeout=None, updated=None, **kwargs):
     '''
     Place the CLI in a waiting state until a condition of the vnet gateway nat rule is met.
     '''

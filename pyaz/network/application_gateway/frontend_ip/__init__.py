@@ -1,34 +1,34 @@
 from .... pyaz_utils import call_az
 
-def list(gateway_name, resource_group):
+def list(gateway_name, resource_group, **kwargs):
     '''
     List frontend IP addresses.
     '''
     return call_az("az network application-gateway frontend-ip list", locals())
 
 
-def show(gateway_name, name, resource_group):
+def show(gateway_name, name, resource_group, **kwargs):
     '''
     Get the details of a frontend IP address.
     '''
     return call_az("az network application-gateway frontend-ip show", locals())
 
 
-def delete(gateway_name, name, resource_group, no_wait=None):
+def delete(gateway_name, name, resource_group, no_wait=None, **kwargs):
     '''
     Delete a frontend IP address.
     '''
     return call_az("az network application-gateway frontend-ip delete", locals())
 
 
-def create(gateway_name, name, resource_group, no_wait=None, private_ip_address=None, public_ip_address=None, subnet=None, vnet_name=None):
+def create(gateway_name, name, resource_group, no_wait=None, private_ip_address=None, public_ip_address=None, subnet=None, vnet_name=None, **kwargs):
     '''
     Create a frontend IP address.
     '''
     return call_az("az network application-gateway frontend-ip create", locals())
 
 
-def update(gateway_name, name, resource_group, add=None, force_string=None, no_wait=None, private_ip_address=None, public_ip_address=None, remove=None, set=None, subnet=None, vnet_name=None):
+def update(gateway_name, name, resource_group, add=None, force_string=None, no_wait=None, private_ip_address=None, public_ip_address=None, remove=None, set=None, subnet=None, vnet_name=None, **kwargs):
     '''
     Update a frontend IP address.
     '''

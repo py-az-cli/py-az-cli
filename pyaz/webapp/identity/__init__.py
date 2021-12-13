@@ -1,20 +1,20 @@
 from ... pyaz_utils import call_az
 
-def assign(name, resource_group, identities=None, role=None, scope=None, slot=None):
+def assign(name, resource_group, identities=None, role=None, scope=None, slot=None, **kwargs):
     '''
     assign managed identity to the web app
     '''
     return call_az("az webapp identity assign", locals())
 
 
-def show(name, resource_group, slot=None):
+def show(name, resource_group, slot=None, **kwargs):
     '''
     display web app's managed identity
     '''
     return call_az("az webapp identity show", locals())
 
 
-def remove(name, resource_group, identities=None, slot=None):
+def remove(name, resource_group, identities=None, slot=None, **kwargs):
     '''
     Disable web app's managed identity
     '''

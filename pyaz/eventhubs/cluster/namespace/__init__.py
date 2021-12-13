@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def list(name, resource_group):
+def list(name, resource_group, **kwargs):
     '''
     List of Namespaces within given Cluster.
     '''

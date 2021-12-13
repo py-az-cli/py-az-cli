@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def add(name, password=None, repository=None, resource_group=None, suffix=None, username=None):
+def add(name, password=None, repository=None, resource_group=None, suffix=None, username=None, **kwargs):
     '''
     Add a helm chart repository from an Azure Container Registry through the Helm CLI.
     '''

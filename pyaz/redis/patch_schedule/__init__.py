@@ -1,27 +1,27 @@
 from ... pyaz_utils import call_az
 
-def create(name, resource_group, schedule_entries):
+def create(name, resource_group, schedule_entries, **kwargs):
     '''
     Create patching schedule for Redis cache.
     '''
     return call_az("az redis patch-schedule create", locals())
 
 
-def update(name, resource_group, schedule_entries):
+def update(name, resource_group, schedule_entries, **kwargs):
     '''
     Update the patching schedule for Redis cache.
     '''
     return call_az("az redis patch-schedule update", locals())
 
 
-def delete(name, resource_group):
+def delete(name, resource_group, **kwargs):
     '''
     Deletes the patching schedule of a redis cache.
     '''
     return call_az("az redis patch-schedule delete", locals())
 
 
-def show(name, resource_group):
+def show(name, resource_group, **kwargs):
     '''
     Gets the patching schedule of a redis cache.
     '''

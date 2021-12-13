@@ -1,27 +1,27 @@
 from .... pyaz_utils import call_az
 
-def submit(executor_size, executors, main_definition_file, name, spark_pool_name, workspace_name, archives=None, arguments=None, configuration=None, language=None, main_class_name=None, reference_files=None, tags=None):
+def submit(executor_size, executors, main_definition_file, name, spark_pool_name, workspace_name, archives=None, arguments=None, configuration=None, language=None, main_class_name=None, reference_files=None, tags=None, **kwargs):
     '''
     Submit a Spark job.
     '''
     return call_az("az synapse spark job submit", locals())
 
 
-def list(spark_pool_name, workspace_name, from_index=None, size=None):
+def list(spark_pool_name, workspace_name, from_index=None, size=None, **kwargs):
     '''
     List all Spark jobs.
     '''
     return call_az("az synapse spark job list", locals())
 
 
-def show(livy_id, spark_pool_name, workspace_name):
+def show(livy_id, spark_pool_name, workspace_name, **kwargs):
     '''
     Get a Spark job.
     '''
     return call_az("az synapse spark job show", locals())
 
 
-def cancel(livy_id, spark_pool_name, workspace_name, yes=None):
+def cancel(livy_id, spark_pool_name, workspace_name, yes=None, **kwargs):
     '''
     Cancel a Spark job.
     '''

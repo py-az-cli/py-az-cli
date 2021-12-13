@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def show(name, resource_group=None):
+def show(name, resource_group=None, **kwargs):
     '''
     Get IoT Hub's device streams endpoints.
     '''

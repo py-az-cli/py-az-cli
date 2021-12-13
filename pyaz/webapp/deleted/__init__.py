@@ -1,13 +1,13 @@
 from ... pyaz_utils import call_az
 
-def list(name=None, resource_group=None, slot=None):
+def list(name=None, resource_group=None, slot=None, **kwargs):
     '''
     List web apps that have been deleted.
     '''
     return call_az("az webapp deleted list", locals())
 
 
-def restore(deleted_id, name, resource_group, restore_content_only=None, slot=None):
+def restore(deleted_id, name, resource_group, restore_content_only=None, slot=None, **kwargs):
     '''
     Restore a deleted web app.
     '''

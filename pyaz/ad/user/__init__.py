@@ -1,35 +1,35 @@
 from ... pyaz_utils import call_az
 
-def delete(id):
+def delete(id, **kwargs):
     return call_az("az ad user delete", locals())
 
 
-def show(id):
+def show(id, **kwargs):
     return call_az("az ad user show", locals())
 
 
-def list(display_name=None, filter=None, upn=None):
+def list(display_name=None, filter=None, upn=None, **kwargs):
     '''
     List Azure Active Directory users.
     '''
     return call_az("az ad user list", locals())
 
 
-def get_member_groups(id, security_enabled_only=None):
+def get_member_groups(id, security_enabled_only=None, **kwargs):
     '''
     Get groups of which the user is a member
     '''
     return call_az("az ad user get-member-groups", locals())
 
 
-def create(display_name, password, user_principal_name, force_change_password_next_login=None, immutable_id=None, mail_nickname=None):
+def create(display_name, password, user_principal_name, force_change_password_next_login=None, immutable_id=None, mail_nickname=None, **kwargs):
     '''
     Create an Azure Active Directory user.
     '''
     return call_az("az ad user create", locals())
 
 
-def update(id, account_enabled=None, display_name=None, force_change_password_next_login=None, mail_nickname=None, password=None):
+def update(id, account_enabled=None, display_name=None, force_change_password_next_login=None, mail_nickname=None, password=None, **kwargs):
     '''
     Update Azure Active Directory users.
     '''

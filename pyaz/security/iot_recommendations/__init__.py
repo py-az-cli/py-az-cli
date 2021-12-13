@@ -1,13 +1,13 @@
 from ... pyaz_utils import call_az
 
-def list(resource_group, solution_name):
+def list(resource_group, solution_name, **kwargs):
     '''
     List all yours IoT Security solution aggregated recommendations.
     '''
     return call_az("az security iot-recommendations list", locals())
 
 
-def show(name, resource_group, solution_name):
+def show(name, resource_group, solution_name, **kwargs):
     '''
     Shows a single aggregated recommendation of yours IoT Security solution.
     '''
