@@ -1,6 +1,6 @@
 from ..... pyaz_utils import call_az
 
-def create(name, value, operator=None, **kwargs):
+def create(name, value, operator=None):
     '''
     Build a metric alert rule dimension.
     '''

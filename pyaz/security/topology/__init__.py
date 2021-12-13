@@ -1,13 +1,13 @@
 from ... pyaz_utils import call_az
 
-def list(**kwargs):
+def list():
     '''
     Shows the network topology in your subscription.
     '''
     return call_az("az security topology list", locals())
 
 
-def show(name, resource_group, **kwargs):
+def show(name, resource_group):
     '''
     Shows the network topology in your subscription.
     '''

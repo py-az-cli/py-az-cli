@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def list(id, **kwargs):
+def list(id):
     '''
     List service principal owners.
     '''

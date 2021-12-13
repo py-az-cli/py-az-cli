@@ -1,13 +1,13 @@
 from ..... pyaz_utils import call_az
 
-def list(**kwargs):
+def list():
     '''
     List ExpressRoute port locations.
     '''
     return call_az("az network express-route port location list", locals())
 
 
-def show(location, **kwargs):
+def show(location):
     '''
     Get the details of an ExpressRoute port location.
     '''

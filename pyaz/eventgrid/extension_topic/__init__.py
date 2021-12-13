@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def show(scope, **kwargs):
+def show(scope):
     '''
     Get the details of an extension topic.
     '''

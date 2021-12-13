@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def list(account_name, resource_group, **kwargs):
+def list(account_name, resource_group):
     '''
     Get the private link resources that need to be created for a storage account.
     '''

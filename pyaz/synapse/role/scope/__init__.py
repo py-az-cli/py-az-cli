@@ -1,6 +1,6 @@
 from .... pyaz_utils import call_az
 
-def list(workspace_name, **kwargs):
+def list(workspace_name):
     '''
     List role scopes.
     '''

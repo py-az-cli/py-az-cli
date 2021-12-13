@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def list(id=None, name=None, resource_group=None, type=None, **kwargs):
+def list(id=None, name=None, resource_group=None, type=None):
     '''
     List all private link resources.
     '''

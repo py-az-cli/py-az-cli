@@ -1,6 +1,6 @@
 from .. pyaz_utils import call_az
 
-def style(theme=None, **kwargs):
+def style(theme=None):
     '''
     A demo showing supported text styles.
     '''

@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def list(hsm_name=None, resource_group=None, vault_name=None, **kwargs):
+def list(hsm_name=None, resource_group=None, vault_name=None):
     '''
     List the private link resources supported for a Key Vault/HSM.
     '''

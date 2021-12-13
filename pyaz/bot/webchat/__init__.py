@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def show(name, resource_group, with_secrets=None, **kwargs):
+def show(name, resource_group, with_secrets=None):
     '''
     Get details of the Webchat Channel on a bot
     '''

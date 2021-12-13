@@ -1,13 +1,13 @@
 from ... pyaz_utils import call_az
 
-def list(**kwargs):
+def list():
     '''
     Get operations from all providers.
     '''
     return call_az("az provider operation list", locals())
 
 
-def show(namespace, **kwargs):
+def show(namespace):
     '''
     Get an individual provider's operations.
     '''

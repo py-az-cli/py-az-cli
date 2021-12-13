@@ -1,6 +1,6 @@
 from ... pyaz_utils import call_az
 
-def list(location, **kwargs):
+def list(location):
     '''
     Show all commitment tiers for Azure Cognitive Services.
     '''

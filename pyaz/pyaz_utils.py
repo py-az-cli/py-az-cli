@@ -18,7 +18,7 @@ def call_az(command: str, parameters: Dict) -> object:
     """
     params = _get_params(parameters)
     full_command = f"{command} {params}"
-    print(full_command)
+    print(f"Executing command: {full_command}")
     output = subprocess.run(full_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout = output.stdout.decode("utf-8")
     stderr = output.stderr.decode("utf-8")
