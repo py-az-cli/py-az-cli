@@ -1,4 +1,4 @@
-# az-py-cli
+# py-az-cli
 Pythonic wrapper for az cli
 
 Requires Python 3
