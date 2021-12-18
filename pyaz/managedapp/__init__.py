@@ -1,4 +1,4 @@
-from .. pyaz_utils import call_az
+from .. pyaz_utils import _call_az
 from . import definition
 
 
@@ -6,23 +6,23 @@ def create(kind, managed_rg_id, name, resource_group, location=None, managedapp_
     '''
     Create a managed application.
     '''
-    return call_az("az managedapp create", locals())
+    return _call_az("az managedapp create", locals())
 
 
 def delete(name, resource_group):
     '''
     Delete a managed application.
     '''
-    return call_az("az managedapp delete", locals())
+    return _call_az("az managedapp delete", locals())
 
 
 def show(name=None, resource_group=None):
-    return call_az("az managedapp show", locals())
+    return _call_az("az managedapp show", locals())
 
 
 def list(resource_group=None):
     '''
     List managed applications.
     '''
-    return call_az("az managedapp list", locals())
+    return _call_az("az managedapp list", locals())
 

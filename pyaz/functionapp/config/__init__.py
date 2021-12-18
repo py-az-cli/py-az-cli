@@ -1,4 +1,4 @@
-from ... pyaz_utils import call_az
+from ... pyaz_utils import _call_az
 from . import access_restriction, appsettings, container, hostname, ssl
 
 
@@ -6,12 +6,12 @@ def set(name, resource_group, always_on=None, auto_heal_enabled=None, ftps_state
     '''
     Set an existing function app's configuration.
     '''
-    return call_az("az functionapp config set", locals())
+    return _call_az("az functionapp config set", locals())
 
 
 def show(name, resource_group, slot=None):
     '''
     Get the details of an existing function app's configuration.
     '''
-    return call_az("az functionapp config show", locals())
+    return _call_az("az functionapp config show", locals())
 

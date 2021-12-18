@@ -1,4 +1,4 @@
-from .... pyaz_utils import call_az
+from .... pyaz_utils import _call_az
 from . import endpoint, output, test_configuration, test_group
 
 
@@ -6,47 +6,47 @@ def create(name, dest_address=None, dest_port=None, dest_resource=None, do_not_s
     '''
     Create a connection monitor.
     '''
-    return call_az("az network watcher connection-monitor create", locals())
+    return _call_az("az network watcher connection-monitor create", locals())
 
 
 def delete(location, name, resource_group=None):
     '''
     Delete a connection monitor for the given region.
     '''
-    return call_az("az network watcher connection-monitor delete", locals())
+    return _call_az("az network watcher connection-monitor delete", locals())
 
 
 def show(location, name, resource_group=None):
     '''
     Shows a connection monitor by name.
     '''
-    return call_az("az network watcher connection-monitor show", locals())
+    return _call_az("az network watcher connection-monitor show", locals())
 
 
 def stop(location, name, resource_group=None):
     '''
     Stop the specified connection monitor.
     '''
-    return call_az("az network watcher connection-monitor stop", locals())
+    return _call_az("az network watcher connection-monitor stop", locals())
 
 
 def start(location, name, resource_group=None):
     '''
     Start the specified connection monitor.
     '''
-    return call_az("az network watcher connection-monitor start", locals())
+    return _call_az("az network watcher connection-monitor start", locals())
 
 
 def query(location, name, resource_group=None):
     '''
     Query a snapshot of the most recent connection state of a connection monitor.
     '''
-    return call_az("az network watcher connection-monitor query", locals())
+    return _call_az("az network watcher connection-monitor query", locals())
 
 
 def list(location, resource_group=None):
     '''
     List connection monitors for the given region.
     '''
-    return call_az("az network watcher connection-monitor list", locals())
+    return _call_az("az network watcher connection-monitor list", locals())
 

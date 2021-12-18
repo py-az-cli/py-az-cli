@@ -1,4 +1,4 @@
-from ... pyaz_utils import call_az
+from ... pyaz_utils import _call_az
 from . import access_restriction, appsettings, backup, connection_string, container, hostname, snapshot, ssl, storage_account
 
 
@@ -6,12 +6,12 @@ def set(name, resource_group, always_on=None, auto_heal_enabled=None, ftps_state
     '''
     Set a web app's configuration.
     '''
-    return call_az("az webapp config set", locals())
+    return _call_az("az webapp config set", locals())
 
 
 def show(name, resource_group, slot=None):
     '''
     Get the details of a web app's configuration.
     '''
-    return call_az("az webapp config show", locals())
+    return _call_az("az webapp config show", locals())
 

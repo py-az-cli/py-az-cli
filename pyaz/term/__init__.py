@@ -1,15 +1,15 @@
-from .. pyaz_utils import call_az
+from .. pyaz_utils import _call_az
 
 def show(plan, product, publisher):
     '''
     Get marketplace terms.
     '''
-    return call_az("az term show", locals())
+    return _call_az("az term show", locals())
 
 
 def accept(plan, product, publisher):
     '''
     Accept marketplace terms.
     '''
-    return call_az("az term accept", locals())
+    return _call_az("az term accept", locals())
 

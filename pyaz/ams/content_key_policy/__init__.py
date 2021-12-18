@@ -1,4 +1,4 @@
-from ... pyaz_utils import call_az
+from ... pyaz_utils import _call_az
 from . import option
 
 
@@ -6,33 +6,33 @@ def create(account_name, name, policy_option_name, resource_group, alt_rsa_token
     '''
     Create a new content key policy.
     '''
-    return call_az("az ams content-key-policy create", locals())
+    return _call_az("az ams content-key-policy create", locals())
 
 
 def show(account_name, name, resource_group, with_secrets=None):
     '''
     Show an existing content key policy.
     '''
-    return call_az("az ams content-key-policy show", locals())
+    return _call_az("az ams content-key-policy show", locals())
 
 
 def delete(account_name, name, resource_group):
     '''
     Delete a content key policy.
     '''
-    return call_az("az ams content-key-policy delete", locals())
+    return _call_az("az ams content-key-policy delete", locals())
 
 
 def list(account_name, resource_group, filter=None, orderby=None, top=None):
     '''
     List all the content key policies within an Azure Media Services account.
     '''
-    return call_az("az ams content-key-policy list", locals())
+    return _call_az("az ams content-key-policy list", locals())
 
 
 def update(account_name, name, resource_group, add=None, description=None, force_string=None, remove=None, set=None):
     '''
     Update an existing content key policy.
     '''
-    return call_az("az ams content-key-policy update", locals())
+    return _call_az("az ams content-key-policy update", locals())
 

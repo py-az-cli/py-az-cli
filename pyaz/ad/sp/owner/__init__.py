@@ -1,8 +1,8 @@
-from .... pyaz_utils import call_az
+from .... pyaz_utils import _call_az
 
 def list(id):
     '''
     List service principal owners.
     '''
-    return call_az("az ad sp owner list", locals())
+    return _call_az("az ad sp owner list", locals())
 

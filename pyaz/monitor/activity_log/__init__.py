@@ -1,4 +1,4 @@
-from ... pyaz_utils import call_az
+from ... pyaz_utils import _call_az
 from . import alert
 
 
@@ -6,12 +6,12 @@ def list(caller=None, correlation_id=None, end_time=None, filters=None, max_even
     '''
     List and query activity log events.
     '''
-    return call_az("az monitor activity-log list", locals())
+    return _call_az("az monitor activity-log list", locals())
 
 
 def list_categories():
     '''
     List the event categories of activity logs.
     '''
-    return call_az("az monitor activity-log list-categories", locals())
+    return _call_az("az monitor activity-log list-categories", locals())
 

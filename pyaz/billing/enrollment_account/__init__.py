@@ -1,9 +1,9 @@
-from ... pyaz_utils import call_az
+from ... pyaz_utils import _call_az
 
 def list():
-    return call_az("az billing enrollment-account list", locals())
+    return _call_az("az billing enrollment-account list", locals())
 
 
 def show(name):
-    return call_az("az billing enrollment-account show", locals())
+    return _call_az("az billing enrollment-account show", locals())
 

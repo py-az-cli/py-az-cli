@@ -1,3 +1,3 @@
-from ... pyaz_utils import call_az
+from ... pyaz_utils import _call_az
 from . import app
 

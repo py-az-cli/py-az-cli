@@ -1,9 +1,9 @@
-from .... pyaz_utils import call_az
+from .... pyaz_utils import _call_az
 
 def show(account, database_name):
-    return call_az("az dla catalog database show", locals())
+    return _call_az("az dla catalog database show", locals())
 
 
 def list(account, count=None, filter=None, orderby=None, select=None, skip=None, top=None):
-    return call_az("az dla catalog database list", locals())
+    return _call_az("az dla catalog database list", locals())
 

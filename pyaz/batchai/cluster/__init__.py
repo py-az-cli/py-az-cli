@@ -1,4 +1,4 @@
-from ... pyaz_utils import call_az
+from ... pyaz_utils import _call_az
 from . import file, node
 
 
@@ -6,40 +6,40 @@ def create(name, resource_group, workspace, afs_mount_path=None, afs_name=None, 
     '''
     Create a cluster.
     '''
-    return call_az("az batchai cluster create", locals())
+    return _call_az("az batchai cluster create", locals())
 
 
 def delete(name, resource_group, workspace, no_wait=None, yes=None):
     '''
     Delete a cluster.
     '''
-    return call_az("az batchai cluster delete", locals())
+    return _call_az("az batchai cluster delete", locals())
 
 
 def show(name, resource_group, workspace):
     '''
     Show information about a cluster.
     '''
-    return call_az("az batchai cluster show", locals())
+    return _call_az("az batchai cluster show", locals())
 
 
 def list(resource_group, workspace):
     '''
     List clusters.
     '''
-    return call_az("az batchai cluster list", locals())
+    return _call_az("az batchai cluster list", locals())
 
 
 def resize(name, resource_group, target, workspace):
     '''
     Resize a cluster.
     '''
-    return call_az("az batchai cluster resize", locals())
+    return _call_az("az batchai cluster resize", locals())
 
 
 def auto_scale(max, min, name, resource_group, workspace):
     '''
     Set auto-scale parameters for a cluster.
     '''
-    return call_az("az batchai cluster auto-scale", locals())
+    return _call_az("az batchai cluster auto-scale", locals())
 
