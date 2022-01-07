@@ -10,6 +10,9 @@ def list():
 def show(name):
     '''
     Shows a regulatory compliance details state for selected standard.
+
+    Required Parameters:
+    - name -- name of the resource to be fetched
     '''
     return _call_az("az security regulatory-compliance-standards show", locals())
 

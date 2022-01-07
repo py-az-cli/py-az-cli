@@ -1,3 +1,6 @@
+'''
+billing property
+'''
 from ... pyaz_utils import _call_az
 
 def show():
@@ -10,6 +13,9 @@ def show():
 def update(cost_center=None):
     '''
     Update the billing property of a subscription. Currently, cost center can be updated. The operation is supported only for billing accounts with agreement type Microsoft Customer Agreement.
+
+    Optional Parameters:
+    - cost_center -- The cost center applied to the subscription.
     '''
     return _call_az("az billing property update", locals())
 

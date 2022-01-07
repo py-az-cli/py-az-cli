@@ -1,3 +1,6 @@
+'''
+View your security settings.
+'''
 from ... pyaz_utils import _call_az
 
 def list():
@@ -10,6 +13,9 @@ def list():
 def show(name):
     '''
     Shows a security setting.
+
+    Required Parameters:
+    - name -- The name of the setting
     '''
     return _call_az("az security setting show", locals())
 
@@ -17,6 +23,10 @@ def show(name):
 def update(enabled, name):
     '''
     Updates a security setting.
+
+    Required Parameters:
+    - enabled -- Enable or disable the setting status.
+    - name -- The name of the setting
     '''
     return _call_az("az security setting update", locals())
 

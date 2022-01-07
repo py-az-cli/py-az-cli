@@ -1,3 +1,6 @@
+'''
+Get provider operations metadatas.
+'''
 from ... pyaz_utils import _call_az
 
 def list():
@@ -10,6 +13,9 @@ def list():
 def show(namespace):
     '''
     Get an individual provider's operations.
+
+    Required Parameters:
+    - namespace -- the resource namespace, aka 'provider'
     '''
     return _call_az("az provider operation show", locals())
 

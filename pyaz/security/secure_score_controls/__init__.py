@@ -10,6 +10,9 @@ def list():
 def list_by_score(name):
     '''
     List supported of secure score controls details and state for selected score.
+
+    Required Parameters:
+    - name -- name of the resource to be fetched
     '''
     return _call_az("az security secure-score-controls list_by_score", locals())
 

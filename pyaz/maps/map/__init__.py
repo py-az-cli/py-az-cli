@@ -1,3 +1,6 @@
+'''
+Manage map with maps
+'''
 from ... pyaz_utils import _call_az
 
 def list_operation():

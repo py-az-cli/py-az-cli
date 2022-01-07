@@ -10,6 +10,9 @@ def list():
 def show(name):
     '''
     Shows a secure score details for selected initiative.
+
+    Required Parameters:
+    - name -- name of the resource to be fetched
     '''
     return _call_az("az security secure-scores show", locals())
 
