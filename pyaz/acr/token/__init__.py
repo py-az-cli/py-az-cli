@@ -16,9 +16,9 @@ def create(name, registry, expiration=None, expiration_in_days=None, gateway=Non
     Optional Parameters:
     - expiration -- UTC time for which the credentials will be valid. In the format of %Y-%m-%dT%H:%M:%SZ, e.g. 2025-12-31T12:59:59Z
     - expiration_in_days -- Number of days for which the credentials will be valid. If not specified, the expiration will default to the max value "9999-12-31T23:59:59.999999+00:00"
-    - gateway -- gateway permissions. Use the format "--gateway GATEWAY [ACTION1 ACTION2 ...]" per flag. Valid actions are {'config/read', 'message/write', 'config/write', 'message/read'}
+    - gateway -- gateway permissions. Use the format "--gateway GATEWAY [ACTION1 ACTION2 ...]" per flag. Valid actions are {'config/write', 'message/read', 'message/write', 'config/read'}
     - no_passwords -- Do not generate passwords, instead use "az acr token credential generate"
-    - repository -- repository permissions. Use the format "--repository REPO [ACTION1 ACTION2 ...]" per flag. Valid actions are {'content/read', 'content/write', 'metadata/write', 'metadata/read', 'content/delete'}
+    - repository -- repository permissions. Use the format "--repository REPO [ACTION1 ACTION2 ...]" per flag. Valid actions are {'metadata/read', 'content/read', 'content/delete', 'content/write', 'metadata/write'}
     - resource_group -- Name of resource group. You can configure the default group using `az configure --defaults group=<name>`
     - scope_map -- The name of the scope map with pre-configured repository permissions. Use "--repository" and/or "--gateway" if you would like CLI to configure one for you
     - status -- The status of the token
