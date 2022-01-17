@@ -2,7 +2,7 @@
 Manage Azure Cosmos DB database accounts.
 '''
 from .. pyaz_utils import _call_az
-from . import collection, database, identity, keys, locations, network_rule, private_endpoint_connection, private_link_resource, restorable_database_account, table
+from . import collection, database, identity, keys, locations, mongodb, network_rule, private_endpoint_connection, private_link_resource, restorable_database_account, sql, table
 
 
 def show(name, resource_group):

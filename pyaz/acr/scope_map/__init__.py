@@ -10,8 +10,8 @@ def create(name, registry, description=None, gateway=None, repository=None, reso
 
     Optional Parameters:
     - description -- Description for the scope map. Maximum 256 characters are allowed.
-    - gateway -- gateway permissions. Use the format "--gateway GATEWAY [ACTION1 ACTION2 ...]" per flag. Valid actions are {'config/write', 'message/read', 'message/write', 'config/read'}
-    - repository -- repository permissions. Use the format "--repository REPO [ACTION1 ACTION2 ...]" per flag. Valid actions are {'metadata/read', 'content/read', 'content/delete', 'content/write', 'metadata/write'}
+    - gateway -- gateway permissions. Use the format "--gateway GATEWAY [ACTION1 ACTION2 ...]" per flag. Valid actions are {'message/write', 'config/read', 'message/read', 'config/write'}
+    - repository -- repository permissions. Use the format "--repository REPO [ACTION1 ACTION2 ...]" per flag. Valid actions are {'metadata/read', 'metadata/write', 'content/write', 'content/delete', 'content/read'}
     - resource_group -- Name of resource group. You can configure the default group using `az configure --defaults group=<name>`
     '''
     return _call_az("az acr scope-map create", locals())
@@ -41,11 +41,11 @@ def update(name, registry, add_gateway=None, add_repository=None, description=No
     - registry -- The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`
 
     Optional Parameters:
-    - add_gateway -- gateway permissions to be added. Use the format "--add-gateway GATEWAY [ACTION1 ACTION2 ...]" per flag. Valid actions are {'config/write', 'message/read', 'message/write', 'config/read'}
-    - add_repository -- repository permissions to be added. Use the format "--add-repository REPO [ACTION1 ACTION2 ...]" per flag. Valid actions are {'metadata/read', 'content/read', 'content/delete', 'content/write', 'metadata/write'}
+    - add_gateway -- gateway permissions to be added. Use the format "--add-gateway GATEWAY [ACTION1 ACTION2 ...]" per flag. Valid actions are {'message/write', 'config/read', 'message/read', 'config/write'}
+    - add_repository -- repository permissions to be added. Use the format "--add-repository REPO [ACTION1 ACTION2 ...]" per flag. Valid actions are {'metadata/read', 'metadata/write', 'content/write', 'content/delete', 'content/read'}
     - description -- Description for the scope map. Maximum 256 characters are allowed.
-    - remove_gateway -- gateway permissions to be removed. Use the format "--remove-gateway GATEWAY [ACTION1 ACTION2 ...]" per flag. Valid actions are {'config/write', 'message/read', 'message/write', 'config/read'}
-    - remove_repository -- respsitory permissions to be removed. Use the format "--remove-repository REPO [ACTION1 ACTION2 ...]" per flag. Valid actions are {'metadata/read', 'content/read', 'content/delete', 'content/write', 'metadata/write'}
+    - remove_gateway -- gateway permissions to be removed. Use the format "--remove-gateway GATEWAY [ACTION1 ACTION2 ...]" per flag. Valid actions are {'message/write', 'config/read', 'message/read', 'config/write'}
+    - remove_repository -- respsitory permissions to be removed. Use the format "--remove-repository REPO [ACTION1 ACTION2 ...]" per flag. Valid actions are {'metadata/read', 'metadata/write', 'content/write', 'content/delete', 'content/read'}
     - resource_group -- Name of resource group. You can configure the default group using `az configure --defaults group=<name>`
     '''
     return _call_az("az acr scope-map update", locals())

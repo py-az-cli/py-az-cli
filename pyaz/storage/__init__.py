@@ -2,7 +2,7 @@
 Manage Azure Cloud Storage resources.
 '''
 from .. pyaz_utils import _call_az
-from . import account, container, container_rm, cors, directory, entity, file, fs, logging, message, metrics, queue, share, share_rm, table
+from . import account, blob, container, container_rm, cors, directory, entity, file, fs, logging, message, metrics, queue, share, share_rm, table
 
 
 def remove(account_key=None, account_name=None, connection_string=None, container_name=None, exclude_path=None, exclude_pattern=None, include_path=None, include_pattern=None, name=None, path=None, recursive=None, sas_token=None, share_name=None):

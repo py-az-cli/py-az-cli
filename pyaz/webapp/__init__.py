@@ -2,7 +2,7 @@
 Manage web apps.
 '''
 from .. pyaz_utils import _call_az
-from . import auth, config, connection, cors, deleted, hybrid_connection, identity, log, traffic_routing, vnet_integration
+from . import auth, config, connection, cors, deleted, deployment, hybrid_connection, identity, log, traffic_routing, vnet_integration
 
 
 def create(name, plan, resource_group, assign_identity=None, deployment_container_image_name=None, deployment_local_git=None, deployment_source_branch=None, deployment_source_url=None, docker_registry_server_password=None, docker_registry_server_user=None, multicontainer_config_file=None, multicontainer_config_type=None, role=None, runtime=None, scope=None, startup_file=None, subnet=None, tags=None, vnet=None):

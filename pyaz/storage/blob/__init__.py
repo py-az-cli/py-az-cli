@@ -2,7 +2,7 @@
 Manage object storage for unstructured data (blobs).
 '''
 from ... pyaz_utils import _call_az
-from . import copy, immutability_policy, incremental_copy, lease, metadata
+from . import copy, immutability_policy, incremental_copy, lease, metadata, service_properties
 
 
 def show(container_name, name, account_key=None, account_name=None, auth_mode=None, connection_string=None, if_match=None, if_modified_since=None, if_none_match=None, if_unmodified_since=None, lease_id=None, sas_token=None, snapshot=None, tags_condition=None, timeout=None):

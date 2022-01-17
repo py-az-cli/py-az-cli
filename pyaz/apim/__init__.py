@@ -2,7 +2,7 @@
 Manage Azure API Management services.
 '''
 from .. pyaz_utils import _call_az
-from . import api, nv
+from . import api, nv, product
 
 
 def create(name, publisher_email, publisher_name, resource_group, enable_client_certificate=None, enable_managed_identity=None, location=None, no_wait=None, sku_capacity=None, sku_name=None, tags=None, virtual_network=None):

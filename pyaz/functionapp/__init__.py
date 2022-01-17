@@ -2,7 +2,7 @@
 Manage function apps. To install the Azure Functions Core tools see https://github.com/Azure/azure-functions-core-tools
 '''
 from .. pyaz_utils import _call_az
-from . import config, cors, function, hybrid_connection, identity, keys, plan, vnet_integration
+from . import config, cors, deployment, function, hybrid_connection, identity, keys, plan, vnet_integration
 
 
 def create(name, resource_group, storage_account, app_insights=None, app_insights_key=None, assign_identity=None, consumption_plan_location=None, deployment_container_image_name=None, deployment_local_git=None, deployment_source_branch=None, deployment_source_url=None, disable_app_insights=None, docker_registry_server_password=None, docker_registry_server_user=None, functions_version=None, os_type=None, plan=None, role=None, runtime=None, runtime_version=None, scope=None, subnet=None, tags=None, vnet=None):

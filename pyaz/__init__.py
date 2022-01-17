@@ -1,5 +1,5 @@
 from . pyaz_utils import _call_az
-from . import account, acr, acs, aks, apim, appconfig, aro, bicep, bot, cache, cdn, cloud, config, container, cosmosdb, demo, deployment, deployment_scripts, disk, disk_access, disk_encryption_set, dms, extension, feature, group, hdinsight, identity, image, keyvault, local_context, lock, logicapp, managedapp, network, openshift, ppg, provider, redis, resource, sig, signalr, snapshot, sql, sshkey, staticwebapp, storage, tag, term, ts, webapp
+from . import account, acr, acs, aks, apim, appconfig, appservice, aro, batchai, bicep, bot, cache, cdn, cloud, cognitiveservices, config, container, cosmosdb, databoxedge, demo, deployment, deployment_scripts, disk, disk_access, disk_encryption_set, dms, extension, feature, functionapp, group, hdinsight, identity, image, keyvault, lab, local_context, lock, logicapp, managedapp, monitor, network, openshift, ppg, provider, redis, resource, sig, signalr, snapshot, sql, sshkey, staticwebapp, storage, tag, term, ts, vm, vmss, webapp
 
 
 def configure(defaults=None, list_defaults=None, scope=None):
